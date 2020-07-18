@@ -66,4 +66,20 @@ export default {
   color: rgb(148, 221, 39);
   margin: 4px;
 }
+
+#button:hover {
+  animation-name: color_change;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@-webkit-keyframes color_change {
+  from {
+    color: rgb(148, 221, 39);
+  }
+  to {
+    color: coral;
+  }
+}
 </style>
