@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div class="clubs">
     <h1>Hi Connie</h1>
     <div>
       Testing Vuex.
@@ -18,7 +18,7 @@
 // import { mapGetters, mapActions } from "vuex";
 
 export default {
-  name: "About",
+  name: "Clubs",
 
   data() {
     return {

@@ -1,60 +1,69 @@
 <template>
   <v-app>
-    <v-app-bar app color="primary" dark>
+    <div>
       <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
+        <h1 id="title">website name</h1>
+        <v-btn to="/" text id="button"> Home </v-btn>
+        <v-btn to="/about" text id="button"> About </v-btn>
+        <v-btn to="/students" text id="button"> For Students </v-btn>
+        <v-btn to="/clubs" text id="button"> For Clubs </v-btn>
+        <v-btn to="/login" text id="button"> Login </v-btn>
       </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn to="/" text> Home </v-btn>
-      <v-btn to="/about" text> About </v-btn>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
+    </div>
 
     <v-content>
       <router-view></router-view>
       <About />
+      <Students />
+      <Clubs />
+      <Login />
     </v-content>
   </v-app>
 </template>
 
 <script>
 import About from "@/components/About.vue";
+import Students from "@/components/Students.vue";
+import Clubs from "@/components/Clubs.vue";
+import Login from "@/components/Login.vue";
 
 export default {
   name: "App",
 
   components: {
-    About
+    About,
+    Students,
+    Clubs,
+    Login,
   },
 
   data: () => ({
     //
-  })
+  }),
 };
 </script>
+
+<style>
+* {
+  font-family: Helvetica;
+  font-weight: lighter;
+  padding: 0;
+  border: 0;
+}
+
+#title {
+  font-size: 45px;
+  font-weight: bold;
+  text-align: center;
+  color: rgb(53, 207, 212);
+  margin: 4px;
+  padding: 50px;
+}
+
+#button {
+  font-size: 20px;
+  text-align: center;
+  color: rgb(148, 221, 39);
+  margin: 4px;
+}
+</style>

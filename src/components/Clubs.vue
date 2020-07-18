@@ -5,11 +5,11 @@
 <script>
 import { mapGetters } from "vuex";
 export default {
-  name: "About",
+  name: "Clubs",
 
   data() {
     return {
-      user: "tao",
+      user: "connie",
     };
   },
 
